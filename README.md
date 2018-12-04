@@ -1,4 +1,9 @@
 # kokoNetworkInterviewAssignment
+
+Prerequisite for Running framework
+Java latest version.
+eclipse (photon) for IDE through which you can easily build and run a project.
+--------------------------------------------------------------------------------------------------------
 click clone/download it will download the project folder in Zip file to local machine
 
 1.Unzip the folder into local machine
