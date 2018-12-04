@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="EGit.KnownHosts">
+		<item value="github.com"/>
+		<item value="git.eclipse.org"/>
+		<item value="bitbucket.org"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://pravashmishra@bitbucket.org/pravashmishra/interview_assignment.git"/>
+	</list>
+	<section name="GitCommitMessageComponent">
+		<list key="G:\Interview_assignment\flipkart_assignment\.git">
+			<item value="empty"/>
+		</list>
+		<list key="G:\Interview_assignment\flipkart_assignment\interview_assignment\.git">
+			<item value="empty"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item value="500,500" key="STAGING_SASH_FORM_WEIGHT"/>
+		<item value="false" key="sortItemState"/>
+		<item value="500,500" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
+	</section>
+</section>

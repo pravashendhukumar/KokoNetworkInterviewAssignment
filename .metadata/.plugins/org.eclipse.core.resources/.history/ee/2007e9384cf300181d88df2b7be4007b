@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="testCases.AddToCartTest">
+        <methods>
+          <include name="loginToFlipkart"/>
+          <include name="launchBrowser"/>
+          <include name="goToProduct"/>
+        </methods>
+      </class> <!-- testCases.AddToCartTest -->
+      <class name="testCases.LoginTest">
+        <methods>
+          <include name="launchUrl"/>
+          <include name="validateFlipkartLogin"/>
+          <include name="validateHomePageNavigation"/>
+        </methods>
+      </class> <!-- testCases.LoginTest -->
+      <class name="testCases.ItemSearchTest">
+        <methods>
+          <include name="loginToFlipkart"/>
+          <include name="navigateToMobilePageThroughSearchBox"/>
+          <include name="launchUrl"/>
+          <include name="verifyMobileFilteredByRam"/>
+          <include name="verifyMobileFilteredyBrand"/>
+        </methods>
+      </class> <!-- testCases.ItemSearchTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

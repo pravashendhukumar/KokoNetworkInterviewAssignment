@@ -1,0 +1,76 @@
+package testCases;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import base.TestBase;
+import pageLibrary.AddToCart;
+import pageLibrary.ItemSearch;
+import pageLibrary.LoginPage;
+
+public class AddToCartTest extends TestBase {
+
+	
+
+	
+
+	@BeforeSuite
+	public void launchBrowser() {
+		initialization();
+
+	}
+
+	@BeforeTest
+	public void loginToFlipkart() {
+
+		LoginPage loginPage = new LoginPage();
+
+		loginPage.loginToFlipkart("pm294254@gmail.com", "nittu@12345");
+
+	}
+
+	@Test
+	public void goToProduct() {
+		
+		ItemSearch itemSearchPage=new ItemSearch();
+		
+		AddToCart addToCart=new AddToCart();
+
+		itemSearchPage.goToMobilePageBySearchBox("moto g5");
+		
+		itemSearchPage.filteredByRam();
+		
+		addToCart.goToProductPage();
+
+		String mainWindow = driver.getWindowHandle();
+
+		Set<String> secondryWindow = driver.getWindowHandles();
+
+		// Now we will iterate using Iterator
+		Iterator<String> I1 = secondryWindow.iterator();
+
+		while (I1.hasNext()) {
+
+			String child_window = I1.next();
+
+			// Here we will compare if parent window is not equal to child window then we
+			// will close
+
+			if (!mainWindow.equals(child_window)) {
+				driver.switchTo().window(child_window);
+
+				System.out.println(driver.switchTo().window(child_window).getTitle());
+
+				addToCart.addToCart();
+			}
+
+		}
+		// once all pop up closed now switch to parent window
+		driver.switchTo().window(mainWindow);
+
+	}
+}

@@ -1,0 +1,11 @@
+Step to run a framework
+
+1.Unzip the folder into local machine
+
+2.Open Eclipse IDE(Photon)
+
+3.Go to FIle->Open project from file system
+A new window is open where in import source choose the path of directory where file is unzip.
+after following all the steps project is successfully importer
+
+4.Now goto Pom.xml file click and choose run as MAven Test framework sucessfully running.

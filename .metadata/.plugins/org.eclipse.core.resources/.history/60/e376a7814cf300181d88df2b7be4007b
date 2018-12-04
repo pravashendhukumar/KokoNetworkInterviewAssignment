@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+    <line>
+      <![CDATA[Successfully logged in to application
+]]>
+    </line>
+    <line>
+      <![CDATA[LogIN verified
+]]>
+    </line>
+    <line>
+      <![CDATA[Mobile is entered in search box and hit on search button
+]]>
+    </line>
+    <line>
+      <![CDATA[Sucessfully navigate to Mobile page
+]]>
+    </line>
+    <line>
+      <![CDATA[Item is filtered by choosen ram
+]]>
+    </line>
+    <line>
+      <![CDATA[Item is filtered by Ram only
+]]>
+    </line>
+    <line>
+      <![CDATA[Motorola is available and selected from suggestion list
+]]>
+    </line>
+    <line>
+      <![CDATA[Item is filetered as per Brand and Ram
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Redmi Note 6 Pro (Black, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Samsung Galaxy On6 (Blue, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Samsung Galaxy On6 (Black, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Redmi Note 5 Pro (Black, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Nokia 6.1 Plus (White, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Vivo Y95 (Starry Black, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Honor 9N (Robin Egg Blue, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Honor 9N (Sapphire Blue, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Honor 9N (Midnight Black, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Realme 2 (Diamond Black, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Redmi Note 5 Pro (Rose Gold, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Samsung Galaxy On8 (Blue, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Realme 2 Pro (Ice Lake, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Realme 2 Pro (Blue Ocean, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Realme 2 (Diamond Blue, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Redmi Note 5 Pro (Blue, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Moto X4 (Super Black, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Realme 2 Pro (Black Sea, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Lenovo K8 Note (Fine Gold, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Lenovo K8 Note (Venom Black, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Redmi Note 5 Pro (Gold, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Mi A2 (Blue/Lake Blue, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Mi A1 (Gold, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[Filtered brands are Mi A2 (Red, 64 GB)
+]]>
+    </line>
+    <line>
+      <![CDATA[brand filter is successfully removed and resulted item are only filtered as per ram
+]]>
+    </line>
+    <line>
+      <![CDATA[Successfully Naviagte to Secondry window
+]]>
+    </line>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="31697" started-at="2018-11-28T20:27:13Z" finished-at="2018-11-28T20:27:44Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="31697" started-at="2018-11-28T20:27:13Z" finished-at="2018-11-28T20:27:44Z">
+      <class name="testCases.FlipkartTest">
+        <test-method status="PASS" signature="launchUrl()[pri:0, instance:testCases.FlipkartTest@35f983a6]" name="launchUrl" is-config="true" duration-ms="11952" started-at="2018-11-29T01:57:13Z" finished-at="2018-11-29T01:57:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchUrl -->
+        <test-method status="PASS" signature="validateFlipkartLogin()[pri:0, instance:testCases.FlipkartTest@35f983a6]" name="validateFlipkartLogin" duration-ms="5082" started-at="2018-11-29T01:57:25Z" finished-at="2018-11-29T01:57:30Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Successfully logged in to application
+]]>
+            </line>
+            <line>
+              <![CDATA[LogIN verified
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateFlipkartLogin -->
+        <test-method status="PASS" signature="navigateToMobilePageThroughSearchBox()[pri:0, instance:testCases.FlipkartTest@35f983a6]" name="navigateToMobilePageThroughSearchBox" duration-ms="2244" started-at="2018-11-29T01:57:30Z" depends-on-methods="testCases.FlipkartTest.validateFlipkartLogin" finished-at="2018-11-29T01:57:32Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Mobile is entered in search box and hit on search button
+]]>
+            </line>
+            <line>
+              <![CDATA[Sucessfully navigate to Mobile page
+]]>
+            </line>
+            <line>
+              <![CDATA[Item is filtered by choosen ram
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- navigateToMobilePageThroughSearchBox -->
+        <test-method status="PASS" signature="verifyMobileFilteredByRam()[pri:0, instance:testCases.FlipkartTest@35f983a6]" name="verifyMobileFilteredByRam" duration-ms="1290" started-at="2018-11-29T01:57:32Z" depends-on-methods="testCases.FlipkartTest.navigateToMobilePageThroughSearchBox" finished-at="2018-11-29T01:57:34Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Item is filtered by Ram only
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyMobileFilteredByRam -->
+        <test-method status="PASS" signature="verifyMobileFilteredyBrand()[pri:0, instance:testCases.FlipkartTest@35f983a6]" name="verifyMobileFilteredyBrand" duration-ms="7343" started-at="2018-11-29T01:57:34Z" depends-on-methods="testCases.FlipkartTest.verifyMobileFilteredByRam" finished-at="2018-11-29T01:57:41Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Motorola is available and selected from suggestion list
+]]>
+            </line>
+            <line>
+              <![CDATA[Item is filetered as per Brand and Ram
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Redmi Note 6 Pro (Black, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Samsung Galaxy On6 (Blue, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Samsung Galaxy On6 (Black, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Redmi Note 5 Pro (Black, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Nokia 6.1 Plus (White, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Vivo Y95 (Starry Black, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Honor 9N (Robin Egg Blue, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Honor 9N (Sapphire Blue, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Honor 9N (Midnight Black, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Realme 2 (Diamond Black, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Redmi Note 5 Pro (Rose Gold, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Samsung Galaxy On8 (Blue, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Realme 2 Pro (Ice Lake, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Realme 2 Pro (Blue Ocean, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Realme 2 (Diamond Blue, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Redmi Note 5 Pro (Blue, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Moto X4 (Super Black, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Realme 2 Pro (Black Sea, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Lenovo K8 Note (Fine Gold, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Lenovo K8 Note (Venom Black, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Redmi Note 5 Pro (Gold, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Mi A2 (Blue/Lake Blue, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Mi A1 (Gold, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[Filtered brands are Mi A2 (Red, 64 GB)
+]]>
+            </line>
+            <line>
+              <![CDATA[brand filter is successfully removed and resulted item are only filtered as per ram
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyMobileFilteredyBrand -->
+        <test-method status="PASS" signature="goToProduct()[pri:0, instance:testCases.FlipkartTest@35f983a6]" name="goToProduct" duration-ms="3555" started-at="2018-11-29T01:57:41Z" depends-on-methods="testCases.FlipkartTest.verifyMobileFilteredyBrand" finished-at="2018-11-29T01:57:44Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Successfully Naviagte to Secondry window
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- goToProduct -->
+      </class> <!-- testCases.FlipkartTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

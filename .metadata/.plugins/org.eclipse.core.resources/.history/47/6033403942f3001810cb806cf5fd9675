@@ -1,0 +1,241 @@
+package pageLibrary;
+
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
+
+import base.TestBase;
+
+public class FlipkartPage extends TestBase {
+
+	@FindBy(xpath = "html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/input")
+	private WebElement userName;
+
+	@FindBy(xpath = "//input[@class='_2zrpKA _3v41xv']")
+	private WebElement password;
+
+	@FindBy(xpath = "//button[@class='_2AkmmA _1LctnI _7UHT_c']")
+	private WebElement loginBtn;
+
+	@FindBy(xpath = ".//*[@id='container']/div/header/div[1]/div/div[3]/div[1]/div/div/div/span/div")
+	private WebElement loginTitle;
+
+	@FindBy(xpath = ".//*[@id='container']/div/header/div[1]/div/div[1]/a")
+	private WebElement homePageLink;
+
+	@FindBy(xpath = ".//*[@id='container']/div/header/div[3]/ul/li/span")
+	private List<WebElement> topMenus;
+
+	@FindBy(xpath = ".//*[@id='container']/div/header/div[3]/ul/li[1]/span")
+	private WebElement electronicsLink;
+
+	@FindBy(xpath = ".//*[@id='container']/div/header/div[3]/ul/li[1]/ul/li/ul/li[1]/ul/li[1]/a")
+	private WebElement mobileLink;
+
+	@FindBy(xpath = ".//*[@id='container']/div/div[1]/div[2]/h1")
+	private WebElement mobileHomepageTitle;
+
+	@FindBy(xpath = ".//*[@id='container']/div/header/div[1]/div/div[2]/form/div/div[1]/div/input")
+	private WebElement itemSearchBox;
+
+	@FindBy(xpath = ".//*[@id='container']/div/header/div[1]/div/div[2]/form/div/div[2]/button")
+	private WebElement searchButton;
+
+	@FindBy(xpath = ".//*[@id='container']/div/div[1]/div[2]/div/div[1]/div[1]/div/div[1]/div/section[4]/div[2]/div/div[2]/div/div")
+	private WebElement filterByRamChkBox;
+
+	@FindBy(xpath = ".//*[@id='container']/div/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div/a/div[3]/div[1]/div[3]/ul/li[1]")
+	private List<WebElement> filteredByRamResult;
+
+	@FindBy(xpath = ".//*[@id='container']/div/div[1]/div[2]/div/div[1]/div[1]/div/div[1]/div/section[5]/div[2]/div[1]/div[1]/input")
+	private WebElement filterByModelTxtBox;
+
+	@FindBy(xpath = ".//*[@id='container']/div/div[1]/div[2]/div/div[1]/div[1]/div/div[1]/div/section[5]/div[2]/div[1]/div[2]/div/div")
+	private List<WebElement> filteredByModelSgstnList;
+
+	@FindBy(xpath = "//div[@class='_3wU53n'][contains(text(),'Moto')]")
+	private List<WebElement> fileterdByBrandResult;
+
+	@FindBy(xpath = ".//div[@class='_3UZZGt'][contains(text(),'Motorola')]")
+	private WebElement brandFilter;
+
+	@FindBy(xpath = "//div[@class='_3wU53n']")
+	private List<WebElement> allBrands;
+
+	@FindBy(xpath = ".//div[@class='_3wU53n'][contains(text(),'Moto G5 Plus (Lunar Grey, 32 GB)')]")
+	private WebElement prdctDetailsLink;
+
+	@FindBy(xpath = "//button[@class='_2AkmmA _2Npkh4 _2MWPVK']")
+	private WebElement addToCartButon;
+
+	public FlipkartPage() {
+
+		PageFactory.initElements(driver, this);
+
+	}
+
+	public String validateLoginPageTitle() {
+
+		return loginTitle.getText();
+
+	}
+
+	public void loginToFlipkart(String loginId, String pwd) {
+
+		userName.clear();
+
+		userName.sendKeys(loginId);
+
+		password.clear();
+
+		password.sendKeys(pwd);
+
+		loginBtn.click();
+
+	}
+
+	public String verifyHomepageTitle() {
+
+		homePageLink.click();
+
+		String topMenuTitle = null;
+
+		for (WebElement topMenu : topMenus)
+
+		{
+
+			if (topMenu.getText().equalsIgnoreCase("Electronics")) {
+
+				topMenuTitle = topMenu.getText();
+				break;
+			}
+
+		}
+
+		return topMenuTitle;
+
+	}
+
+	public void goToMobilePageByLink() {
+
+		electronicsLink.click();
+
+		/// Thread.sleep(2000);
+
+		mobileLink.click();
+
+	}
+
+	public String verifyMobilePageNavigation() {
+
+		return mobileHomepageTitle.getText();
+	}
+
+	public void goToMobilePageBySearchBox(String searchText) {
+
+		itemSearchBox.clear();
+
+		itemSearchBox.sendKeys(searchText);
+
+		searchButton.click();
+
+	}
+
+	public void filteredByRam() {
+
+		filterByRamChkBox.click();
+
+	}
+
+	public void filteredByRamResult() {
+
+		for (WebElement filteredRam : filteredByRamResult) {
+
+			if (filteredRam.getText().contains("4 GB RAM")) {
+
+				// System.out.println(filteredRam.getText());
+				System.out.println("Filtered result are only for choosen Ram");
+
+			}
+
+		}
+
+	}
+
+	public void filteredByBrand(String brand) {
+
+		filterByModelTxtBox.sendKeys(brand);
+
+		for (WebElement brandSgstn : filteredByModelSgstnList) {
+
+			if (brandSgstn.getText().equalsIgnoreCase("Motorola"))
+
+			{
+
+				brandSgstn.click();
+
+				break;
+
+			}
+
+		}
+	}
+
+	public void filteredByBrandResult() {
+		
+
+		for (WebElement displayBrand : fileterdByBrandResult) {
+
+			if (displayBrand.getText().contains("moto"))
+
+			{
+
+				System.out.println("Item is filtered as per brand and Ram");
+
+				Reporter.log("filtered Brands are"+displayBrand.getAttribute("innerHTML") );
+			}
+
+		}
+
+	}
+	
+	public void clearBrandFilter() throws InterruptedException {
+
+		brandFilter.click();
+
+		Thread.sleep(5000);
+
+		System.out.println(allBrands.size());
+
+		for (WebElement allBrand : allBrands) {
+
+			System.out.println(allBrand.getAttribute("innerHTML"));
+
+			if (allBrand.getAttribute("innerHTML").contains("Moto")
+					|| !allBrand.getAttribute("innerHTML").contains("Moto")) {
+
+				System.out.println("filtered result are from all  brand");
+
+			}
+
+		}
+
+	}
+
+	public void goToProductPage() {
+
+		prdctDetailsLink.click();
+
+	}
+
+	public void addToCart() {
+
+		addToCartButon.click();
+	}
+
+	
+
+}

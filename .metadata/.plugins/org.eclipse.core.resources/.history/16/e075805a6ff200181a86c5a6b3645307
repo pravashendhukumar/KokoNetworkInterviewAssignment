@@ -1,0 +1,30 @@
+package pageLibrary;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import base.TestBase;
+
+public class AddToCart extends TestBase{
+	
+	@FindBy(xpath=".//*[@class='_3wU53n'][contains(text(),'Moto G5s (Lunar Gray, 32 GB)')]")
+	WebElement prdctDetailsLink;
+	
+	@FindBy(xpath="//button[@class='_2AkmmA _2Npkh4 _2MWPVK']")
+	WebElement addToCartButon;
+	
+	public void goToProductPage() {
+		
+	   ((JavascriptExecutor)driver).executeScript("scroll(0,400)");
+	  
+	   prdctDetailsLink.click();
+		
+		
+	}
+	
+	public void addToCart(){
+		
+		addToCartButon.click();
+	}
+}

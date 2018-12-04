@@ -1,0 +1,129 @@
+package testCases;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.testng.Assert;
+import org.testng.Reporter;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import base.TestBase;
+import pageLibrary.FlipkartPage;
+
+public class FlipkartTest extends TestBase {
+
+	@BeforeTest
+	public void launchUrl() throws InterruptedException {
+
+		initialization();
+
+	}
+
+	// This method is used for login to fllipkart and verify it after that verify
+	// their top menu contains electronics as in menu
+
+	@Test()
+	public void validateFlipkartLogin() throws InterruptedException {
+
+		FlipkartPage loginToFlipkart = new FlipkartPage();
+		loginToFlipkart.loginToFlipkart("pm294254@gmail.com", "nittu@12345");
+		Reporter.log("Successfully logged in to application" + "\n");
+		Assert.assertNotSame(loginToFlipkart.validateLoginPageTitle(), "Login & Signup");
+		Reporter.log("LogIN verified" + "\n");
+
+	}
+	// This test method is used for go to mobile page through search box and verify
+	// the same
+
+	@Test(dependsOnMethods = { "validateFlipkartLogin" })
+	public void navigateToMobilePageThroughSearchBox() throws InterruptedException {
+
+		FlipkartPage itemSearchThroughSearchBox = new FlipkartPage();
+		itemSearchThroughSearchBox.goToMobilePageBySearchBox("Mobiles");
+		Reporter.log("Mobile is entered in search box and hit on search button" + "\n");
+		if (driver.getTitle().contains("Mobiles")) {
+			System.out.println("Successfully naviagte to Mobile page");
+			Reporter.log("Sucessfully navigate to Mobile page" + "\n");
+		}
+
+		itemSearchThroughSearchBox.filteredByRam();
+		Reporter.log("Item is filtered by choosen ram" + "\n");
+
+	}
+
+	// This test method is used for filter the mobile as per ram and verify the same
+
+	@Test(dependsOnMethods = { "navigateToMobilePageThroughSearchBox" })
+	public void verifyMobileFilteredByRam() throws InterruptedException {
+
+		FlipkartPage filterByRamReult = new FlipkartPage();
+
+		filterByRamReult.filteredByRamResult();
+		Reporter.log("Item is filtered by Ram only" + "\n");
+
+	}
+
+	// This test method first select the mobile that are only from motorola verify
+	// them and after that clear the brand filter
+
+	@Test(dependsOnMethods = { "verifyMobileFilteredByRam" })
+	public void verifyMobileFilteredyBrand() throws InterruptedException {
+
+		FlipkartPage filterByBrand = new FlipkartPage();
+
+		filterByBrand.filteredByBrand("moto");
+
+		Reporter.log("Motorola is available and selected from suggestion list" + "\n");
+
+		filterByBrand.filteredByBrandResult();
+
+		Reporter.log("Item is filetered as per Brand and Ram" + "\n");
+
+		filterByBrand.clearBrandFilter();
+
+		Reporter.log("brand filter is successfully removed and resulted item are only filtered as per ram" + "\n");
+
+	}
+
+	// In this Test case we search the product and find moto G5 plus(Lunar Grey
+	// 32GB) and add to them in the cart
+
+	@Test(dependsOnMethods = { "verifyMobileFilteredyBrand" })
+	public void goToProduct() throws InterruptedException {
+
+		FlipkartPage addToCart = new FlipkartPage();
+
+		addToCart.goToProductPage();
+
+		String mainWindow = driver.getWindowHandle();
+
+		Set<String> secondryWindow = driver.getWindowHandles();
+
+		// Now we will iterate using Iterator
+		Iterator<String> I1 = secondryWindow.iterator();
+
+		while (I1.hasNext()) {
+
+			String child_window = I1.next();
+
+			// Here we will compare if parent window is not equal to child window then we
+			// will close
+
+			if (!mainWindow.equals(child_window)) {
+				driver.switchTo().window(child_window);
+
+				Reporter.log("Successfully Naviagte to Secondry window" + "\n");
+
+				System.out.println(driver.switchTo().window(child_window).getTitle());
+
+				addToCart.addToCart();
+			}
+
+		}
+		// once all pop up closed now switch to parent window
+		// driver.switchTo().window(mainWindow);
+
+	}
+
+}

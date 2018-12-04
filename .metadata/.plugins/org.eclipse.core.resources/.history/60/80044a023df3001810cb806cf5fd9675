@@ -1,0 +1,70 @@
+package testCases;
+
+
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import base.TestBase;
+import pageLibrary.ItemSearch;
+import pageLibrary.LoginPage;
+
+public class ItemSearchTest extends TestBase{
+	
+	@BeforeSuite
+	public void launchUrl() {
+		initialization();
+	}
+	
+	@BeforeTest
+	public void loginToFlipkart() throws InterruptedException {
+		
+		LoginPage loginPage=new LoginPage();
+	
+		loginPage.loginToFlipkart("pm294254@gmail.com", "nittu@12345");
+		
+
+	}
+	
+	
+	@Test
+	public void navigateToMobilePageThroughSearchBox() throws InterruptedException {
+		
+		ItemSearch itemSearch=new ItemSearch();
+		itemSearch.goToMobilePageBySearchBox("Mobiles");
+    	if(driver.getTitle().contains("Mobiles")) {
+    		System.out.println("Successfully naviagte to Mobile page");
+    	}
+    	
+    	itemSearch.filteredByRam();
+    	
+	}
+	
+	@Test(dependsOnMethods={"navigateToMobilePageThroughSearchBox"})
+	public void verifyMobileFilteredByRam() throws InterruptedException {
+		
+		ItemSearch itemSearch=new ItemSearch();
+		
+		Thread.sleep(5000);
+		
+		itemSearch.filteredByRamResult();
+		
+		
+	}
+	
+	@Test
+	public void verifyMobileFilteredyBrand() throws InterruptedException {
+		
+		ItemSearch itemSearch=new ItemSearch();
+		
+		itemSearch.filteredByBrand("moto");
+		
+		itemSearch.filteredByBrandResult();
+		
+		itemSearch.clearBrandFilter();
+		
+		
+			
+	}
+
+}

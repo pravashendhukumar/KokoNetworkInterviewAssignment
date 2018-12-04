@@ -1,0 +1,110 @@
+package testCases;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import base.TestBase;
+import pageLibrary.AddToCart;
+import pageLibrary.ItemSearch;
+import pageLibrary.LoginPage;
+
+public class FlipkartTest extends TestBase {
+
+	@BeforeTest
+	public void launchUrl() throws InterruptedException {
+		initialization();
+
+	}
+
+	@Test()
+	public void validateFlipkartLogin() throws InterruptedException {
+
+		LoginPage loginPage = new LoginPage();
+		loginPage.loginToFlipkart("pm294254@gmail.com", "nittu@12345");
+		Assert.assertNotSame(loginPage.validateLoginPageTitle(), "Login & Signup");
+
+	}
+
+	@Test(dependsOnMethods = { "validateFlipkartLogin" })
+	public void navigateToMobilePageThroughSearchBox() throws InterruptedException {
+
+		ItemSearch itemSearch = new ItemSearch();
+		itemSearch.goToMobilePageBySearchBox("Mobiles");
+		if (driver.getTitle().contains("Mobiles")) {
+			System.out.println("Successfully naviagte to Mobile page");
+		}
+
+		itemSearch.filteredByRam();
+
+	}
+
+	@Test(dependsOnMethods = { "navigateToMobilePageThroughSearchBox" })
+	public void verifyMobileFilteredByRam() throws InterruptedException {
+
+		ItemSearch itemSearch = new ItemSearch();
+
+		Thread.sleep(5000);
+
+		itemSearch.filteredByRamResult();
+
+	}
+
+	@Test(dependsOnMethods = { "verifyMobileFilteredByRam" })
+	public void verifyMobileFilteredyBrand() throws InterruptedException {
+
+		ItemSearch itemSearch = new ItemSearch();
+
+		itemSearch.filteredByBrand("moto");
+
+		itemSearch.filteredByBrandResult();
+
+		itemSearch.clearBrandFilter();
+
+	}
+
+	@Test(dependsOnMethods = {"verifyMobileFilteredyBrand"})
+	public void goToProduct() throws InterruptedException {
+
+		ItemSearch itemSearchPage = new ItemSearch();
+
+		AddToCart addToCart = new AddToCart();
+
+		itemSearchPage.goToMobilePageBySearchBox("moto g5");
+
+		itemSearchPage.filteredByRam();
+
+		addToCart.goToProductPage();
+
+		String mainWindow = driver.getWindowHandle();
+
+		Set<String> secondryWindow = driver.getWindowHandles();
+
+		// Now we will iterate using Iterator
+		Iterator<String> I1 = secondryWindow.iterator();
+
+		while (I1.hasNext()) {
+
+			String child_window = I1.next();
+
+			// Here we will compare if parent window is not equal to child window then we
+			// will close
+
+			if (!mainWindow.equals(child_window)) {
+				driver.switchTo().window(child_window);
+
+				System.out.println(driver.switchTo().window(child_window).getTitle());
+
+				addToCart.addToCart();
+			}
+
+		}
+		// once all pop up closed now switch to parent window
+		// driver.switchTo().window(mainWindow);
+
+	}
+
+}

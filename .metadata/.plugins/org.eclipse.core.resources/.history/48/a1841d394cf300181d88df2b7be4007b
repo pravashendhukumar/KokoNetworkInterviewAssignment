@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Surefire suite</th></tr><tr><td><a href="#t0">Surefire test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">31,697</td><td></td><td></td></tr></table><table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">testCases.FlipkartTest</td><td><a href="#m0">goToProduct</a></td><td rowspan="1">1543436861355</td><td rowspan="1">3555</td></tr><tr class="passedeven"><td><a href="#m1">navigateToMobilePageThroughSearchBox</a></td><td rowspan="1">1543436850475</td><td rowspan="1">2244</td></tr><tr class="passedeven"><td><a href="#m2">validateFlipkartLogin</a></td><td rowspan="1">1543436845388</td><td rowspan="1">5082</td></tr><tr class="passedeven"><td><a href="#m3">verifyMobileFilteredByRam</a></td><td rowspan="1">1543436852720</td><td rowspan="1">1290</td></tr><tr class="passedeven"><td><a href="#m4">verifyMobileFilteredyBrand</a></td><td rowspan="1">1543436854011</td><td rowspan="1">7343</td></tr></tbody></table><h2>Surefire test</h2><h3 id="m0">testCases.FlipkartTest#goToProduct</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Successfully Naviagte to Secondry window
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">testCases.FlipkartTest#navigateToMobilePageThroughSearchBox</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Mobile is entered in search box and hit on search button
+<br/>Sucessfully navigate to Mobile page
+<br/>Item is filtered by choosen ram
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">testCases.FlipkartTest#validateFlipkartLogin</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Successfully logged in to application
+<br/>LogIN verified
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m3">testCases.FlipkartTest#verifyMobileFilteredByRam</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Item is filtered by Ram only
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m4">testCases.FlipkartTest#verifyMobileFilteredyBrand</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Motorola is available and selected from suggestion list
+<br/>Item is filetered as per Brand and Ram
+<br/>Filtered brands are Redmi Note 6 Pro (Black, 64 GB)
+<br/>Filtered brands are Samsung Galaxy On6 (Blue, 64 GB)
+<br/>Filtered brands are Samsung Galaxy On6 (Black, 64 GB)
+<br/>Filtered brands are Redmi Note 5 Pro (Black, 64 GB)
+<br/>Filtered brands are Nokia 6.1 Plus (White, 64 GB)
+<br/>Filtered brands are Vivo Y95 (Starry Black, 64 GB)
+<br/>Filtered brands are Honor 9N (Robin Egg Blue, 64 GB)
+<br/>Filtered brands are Honor 9N (Sapphire Blue, 64 GB)
+<br/>Filtered brands are Honor 9N (Midnight Black, 64 GB)
+<br/>Filtered brands are Realme 2 (Diamond Black, 64 GB)
+<br/>Filtered brands are Redmi Note 5 Pro (Rose Gold, 64 GB)
+<br/>Filtered brands are Samsung Galaxy On8 (Blue, 64 GB)
+<br/>Filtered brands are Realme 2 Pro (Ice Lake, 64 GB)
+<br/>Filtered brands are Realme 2 Pro (Blue Ocean, 64 GB)
+<br/>Filtered brands are Realme 2 (Diamond Blue, 64 GB)
+<br/>Filtered brands are Redmi Note 5 Pro (Blue, 64 GB)
+<br/>Filtered brands are Moto X4 (Super Black, 64 GB)
+<br/>Filtered brands are Realme 2 Pro (Black Sea, 64 GB)
+<br/>Filtered brands are Lenovo K8 Note (Fine Gold, 64 GB)
+<br/>Filtered brands are Lenovo K8 Note (Venom Black, 64 GB)
+<br/>Filtered brands are Redmi Note 5 Pro (Gold, 64 GB)
+<br/>Filtered brands are Mi A2 (Blue/Lake Blue, 64 GB)
+<br/>Filtered brands are Mi A1 (Gold, 64 GB)
+<br/>Filtered brands are Mi A2 (Red, 64 GB)
+<br/>brand filter is successfully removed and resulted item are only filtered as per ram
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>

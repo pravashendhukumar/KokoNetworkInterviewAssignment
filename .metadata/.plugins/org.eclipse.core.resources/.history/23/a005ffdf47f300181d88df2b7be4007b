@@ -1,0 +1,76 @@
+package pageLibrary;
+
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import base.TestBase;
+
+public class LoginPage extends TestBase {
+
+	@FindBy(xpath = "html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/input")
+	private WebElement userName;
+
+	@FindBy(xpath = "//input[@class='_2zrpKA _3v41xv']")
+	private WebElement password;
+
+	@FindBy(xpath = "//button[@class='_2AkmmA _1LctnI _7UHT_c']")
+	private WebElement loginBtn;
+
+	@FindBy(xpath = ".//*[@id='container']/div/header/div[1]/div/div[3]/div[1]/div/div/div/span/div")
+	private WebElement loginTitle;
+
+	@FindBy(xpath = ".//*[@id='container']/div/header/div[1]/div/div[1]/a")
+	private WebElement homePageLink;
+
+	@FindBy(xpath = ".//*[@id='container']/div/header/div[3]/ul/li/span")
+	private List<WebElement> topMenus;
+
+	
+	
+	public LoginPage() {
+
+		PageFactory.initElements(driver, this);
+
+	}
+
+	public String validateLoginPageTitle() {
+
+		return loginTitle.getText();
+
+	}
+
+	public void loginToFlipkart(String loginId, String pwd) {
+
+		userName.sendKeys(loginId);
+
+		password.sendKeys(pwd);
+
+		loginBtn.click();
+
+	}
+
+	public String verifyHomepageTitle() {
+		
+		homePageLink.click();
+		
+		String topMenuTitle = null;
+		
+		for (WebElement topMenu : topMenus)
+
+		{
+			
+			if(topMenu.getText().equalsIgnoreCase("Electronics")) {
+				
+				topMenuTitle=topMenu.getText();
+				break;
+			}
+			
+		}
+		
+		return topMenuTitle;
+	
+	}
+}

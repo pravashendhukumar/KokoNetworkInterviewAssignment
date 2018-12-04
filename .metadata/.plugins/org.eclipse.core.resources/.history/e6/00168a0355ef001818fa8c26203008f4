@@ -1,0 +1,27 @@
+package testCases;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import base.TestBase;
+import pageLibrary.LoginPage;
+
+public class LoginTest extends TestBase{
+	
+	@BeforeTest
+	public void launchUrl()
+	{
+		initialization();
+		
+		
+    }
+	
+	@SuppressWarnings("null")
+	@Test
+	public void validateFlipkartLogin() {
+		
+		LoginPage loginPage = null;
+		loginPage.login("pm294254@gmail.com", "nittu@12345");
+	}
+
+}

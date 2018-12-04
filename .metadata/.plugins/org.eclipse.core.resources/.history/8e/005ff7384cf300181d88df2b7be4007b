@@ -1,0 +1,202 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Nov 29 01:57:13 IST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>31 seconds (31697 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.FlipkartTest.goToProduct()'><b>goToProduct</b><br>Test class: testCases.FlipkartTest<br/>
+<a href="#Output-1070501849" onClick='toggleBox("Output-1070501849", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1070501849" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1070501849">
+Successfully Naviagte to Secondry window
+<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>testCases.FlipkartTest@35f983a6</td></tr>
+<tr>
+<td title='testCases.FlipkartTest.navigateToMobilePageThroughSearchBox()'><b>navigateToMobilePageThroughSearchBox</b><br>Test class: testCases.FlipkartTest<br/>
+<a href="#Output-603305436" onClick='toggleBox("Output-603305436", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-603305436" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-603305436">
+Mobile is entered in search box and hit on search button
+<br/>
+Sucessfully navigate to Mobile page
+<br/>
+Item is filtered by choosen ram
+<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>testCases.FlipkartTest@35f983a6</td></tr>
+<tr>
+<td title='testCases.FlipkartTest.validateFlipkartLogin()'><b>validateFlipkartLogin</b><br>Test class: testCases.FlipkartTest<br/>
+<a href="#Output-79782883" onClick='toggleBox("Output-79782883", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-79782883" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-79782883">
+Successfully logged in to application
+<br/>
+LogIN verified
+<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>testCases.FlipkartTest@35f983a6</td></tr>
+<tr>
+<td title='testCases.FlipkartTest.verifyMobileFilteredByRam()'><b>verifyMobileFilteredByRam</b><br>Test class: testCases.FlipkartTest<br/>
+<a href="#Output-940857381" onClick='toggleBox("Output-940857381", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-940857381" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-940857381">
+Item is filtered by Ram only
+<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>testCases.FlipkartTest@35f983a6</td></tr>
+<tr>
+<td title='testCases.FlipkartTest.verifyMobileFilteredyBrand()'><b>verifyMobileFilteredyBrand</b><br>Test class: testCases.FlipkartTest<br/>
+<a href="#Output-997033037" onClick='toggleBox("Output-997033037", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-997033037" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-997033037">
+Motorola is available and selected from suggestion list
+<br/>
+Item is filetered as per Brand and Ram
+<br/>
+Filtered brands are Redmi Note 6 Pro (Black, 64 GB)
+<br/>
+Filtered brands are Samsung Galaxy On6 (Blue, 64 GB)
+<br/>
+Filtered brands are Samsung Galaxy On6 (Black, 64 GB)
+<br/>
+Filtered brands are Redmi Note 5 Pro (Black, 64 GB)
+<br/>
+Filtered brands are Nokia 6.1 Plus (White, 64 GB)
+<br/>
+Filtered brands are Vivo Y95 (Starry Black, 64 GB)
+<br/>
+Filtered brands are Honor 9N (Robin Egg Blue, 64 GB)
+<br/>
+Filtered brands are Honor 9N (Sapphire Blue, 64 GB)
+<br/>
+Filtered brands are Honor 9N (Midnight Black, 64 GB)
+<br/>
+Filtered brands are Realme 2 (Diamond Black, 64 GB)
+<br/>
+Filtered brands are Redmi Note 5 Pro (Rose Gold, 64 GB)
+<br/>
+Filtered brands are Samsung Galaxy On8 (Blue, 64 GB)
+<br/>
+Filtered brands are Realme 2 Pro (Ice Lake, 64 GB)
+<br/>
+Filtered brands are Realme 2 Pro (Blue Ocean, 64 GB)
+<br/>
+Filtered brands are Realme 2 (Diamond Blue, 64 GB)
+<br/>
+Filtered brands are Redmi Note 5 Pro (Blue, 64 GB)
+<br/>
+Filtered brands are Moto X4 (Super Black, 64 GB)
+<br/>
+Filtered brands are Realme 2 Pro (Black Sea, 64 GB)
+<br/>
+Filtered brands are Lenovo K8 Note (Fine Gold, 64 GB)
+<br/>
+Filtered brands are Lenovo K8 Note (Venom Black, 64 GB)
+<br/>
+Filtered brands are Redmi Note 5 Pro (Gold, 64 GB)
+<br/>
+Filtered brands are Mi A2 (Blue/Lake Blue, 64 GB)
+<br/>
+Filtered brands are Mi A1 (Gold, 64 GB)
+<br/>
+Filtered brands are Mi A2 (Red, 64 GB)
+<br/>
+brand filter is successfully removed and resulted item are only filtered as per ram
+<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>testCases.FlipkartTest@35f983a6</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<h2>Methods run, sorted chronologically</h2><h3>&gt;&gt; means before, &lt;&lt; means after</h3><p/><br/><em>Surefire suite</em><p/><small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table border="1">
+<tr><th>Time</th><th>Delta (ms)</th><th>Suite<br>configuration</th><th>Test<br>configuration</th><th>Class<br>configuration</th><th>Groups<br>configuration</th><th>Method<br>configuration</th><th>Test<br>method</th><th>Thread</th><th>Instances</th></tr>
+<tr bgcolor="9bb367">  <td>18/11/29 01:57:41</td>   <td>0</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FlipkartTest.goToProduct()[pri:0, instance:testCases.FlipkartTest@35f983a6]">goToProduct</td> 
+  <td>main@335471116</td>   <td></td> </tr>
+<tr bgcolor="9bb367">  <td>18/11/29 01:57:13</td>   <td>-28142</td> <td>&nbsp;</td><td title="&gt;&gt;FlipkartTest.launchUrl()[pri:0, instance:testCases.FlipkartTest@35f983a6]">&gt;&gt;launchUrl</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@335471116</td>   <td></td> </tr>
+<tr bgcolor="9bb367">  <td>18/11/29 01:57:30</td>   <td>-10880</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FlipkartTest.navigateToMobilePageThroughSearchBox()[pri:0, instance:testCases.FlipkartTest@35f983a6]">navigateToMobilePageThroughSearchBox</td> 
+  <td>main@335471116</td>   <td></td> </tr>
+<tr bgcolor="9bb367">  <td>18/11/29 01:57:25</td>   <td>-15967</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FlipkartTest.validateFlipkartLogin()[pri:0, instance:testCases.FlipkartTest@35f983a6]">validateFlipkartLogin</td> 
+  <td>main@335471116</td>   <td></td> </tr>
+<tr bgcolor="9bb367">  <td>18/11/29 01:57:32</td>   <td>-8635</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FlipkartTest.verifyMobileFilteredByRam()[pri:0, instance:testCases.FlipkartTest@35f983a6]">verifyMobileFilteredByRam</td> 
+  <td>main@335471116</td>   <td></td> </tr>
+<tr bgcolor="9bb367">  <td>18/11/29 01:57:34</td>   <td>-7344</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="FlipkartTest.verifyMobileFilteredyBrand()[pri:0, instance:testCases.FlipkartTest@35f983a6]">verifyMobileFilteredyBrand</td> 
+  <td>main@335471116</td>   <td></td> </tr>
+</table>
