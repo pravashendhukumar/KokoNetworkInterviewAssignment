@@ -1,6 +1,11 @@
 # kokoNetworkInterviewAssignment
 
+for latest java Download:go to this link https://www.java.com/en/download
+
+for eclipse photon:go to https://www.eclipse.org/downloads/download.php?file=/oomph/epp/photon
+
 Prerequisite for Running framework
+--------------------------------------------------------------------------------------
 Java latest version.
 eclipse (photon) for IDE through which you can easily build and run a project.
 --------------------------------------------------------------------------------------------------------
